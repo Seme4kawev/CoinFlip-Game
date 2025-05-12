@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: #000;
+    color: white;
+    font-family: Arial;
+}
+
+#stats {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+#gameArea {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(45deg, #020111 0%, #19152e 100%),
+                radial-gradient(circle at 50% 50%, #3a325f 0%, transparent 100%);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.coin-container {
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 3;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0px rgba(255, 215, 0, 0.3);
+    transition: box-shadow 0.2s;
+}
+
+.coin-container:hover {
+    box-shadow: 0 0 0 15px rgba(255, 215, 0, 0.1);
+}
+
+.coin {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.2s;
+}
+
+#shop {
+    padding: 20px;
+    border-top: 2px solid #333;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.upgrade {
+    background: #2c3e50;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.upgrade:hover {
+    background: #34495e;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite;
+}

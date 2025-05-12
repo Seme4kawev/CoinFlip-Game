@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coin Clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="stats">
+        Очки: <span id="score">0</span> 
+        | Кликов/сек: <span id="cps">0</span>
+    </div>
+    <div id="gameArea"></div>
+    <div id="shop">
+        <div class="upgrade" onclick="buyUpgrade('clickPower')">
+            Улучшить клик (+1) - Стоимость: <span id="clickCost">10</span>
+        </div>
+        <div class="upgrade" onclick="buyUpgrade('autoClicker')">
+            Автокликер (+1/сек) - Стоимость: <span id="autoCost">50</span>
+        </div>
+        <div class="upgrade" onclick="buyUpgrade('slowTime')">
+            Замедление времени (10 сек) - Стоимость: <span id="slowCost">200</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
